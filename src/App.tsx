@@ -1,8 +1,10 @@
+import { Cardapio } from "./pages/Cardapio";
+
 function App() {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <main>
+      <Cardapio />
+    </main>
   );
 }
 
