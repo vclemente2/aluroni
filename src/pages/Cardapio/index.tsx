@@ -1,5 +1,5 @@
 import styles from "./Cardapio.module.scss";
-import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+import Logo from "../../assets/images/logo.svg";
 import { Buscador } from "./Buscador";
 import { useState } from "react";
 import { Filtros } from "./Filtros";
@@ -13,7 +13,7 @@ export function Cardapio() {
   return (
     <>
       <nav className={styles.menu}>
-        <Logo />
+        <img src={Logo} alt="Logo da Aluroni" />
       </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>A Casa do Código e da Massa</div>
