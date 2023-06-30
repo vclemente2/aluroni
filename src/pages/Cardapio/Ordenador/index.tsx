@@ -4,14 +4,25 @@ import opcoes from "./opcoes.json";
 import classNames from "classnames";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
-export function Ordenador() {
+interface OrdenadorProps {
+  ordenador: string;
+  setOrdenador: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export function Ordenador({ ordenador, setOrdenador }: OrdenadorProps) {
   const [aberto, setAberto] = useState(false);
+
+  const nomeOrdenador =
+    ordenador && opcoes.find((opcao) => opcao.value === ordenador)?.nome;
 
   // useEffect();
 
   return (
     <button
-      className={styles.ordenador}
+      className={classNames({
+        [styles.ordenador]: true,
+        [styles["ordenador--ativo"]]: ordenador !== ""
+      })}
       onClick={() => {
         setAberto(!aberto);
       }}
@@ -19,7 +30,7 @@ export function Ordenador() {
         setAberto(false);
       }}
     >
-      <span>Ordenar Por</span>
+      <span>{nomeOrdenador || "Ordenar Por"}</span>
       {aberto ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -32,7 +43,11 @@ export function Ordenador() {
         })}
       >
         {opcoes.map((opcao) => (
-          <div key={opcao.value} className={styles.ordenador__option}>
+          <div
+            key={opcao.value}
+            className={styles.ordenador__option}
+            onClick={() => setOrdenador(opcao.value)}
+          >
             {opcao.nome}
           </div>
         ))}
