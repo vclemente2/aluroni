@@ -53,12 +53,18 @@ Isso iniciará o servidor de desenvolvimento e fornecerá o endereço local onde
 
 Aqui estão alguns dos recursos e tecnologias-chave usados neste projeto:
 
-- React: Uma biblioteca JavaScript para a construção de interfaces de usuário.
-- Vite: Um construtor de aplicativos web extremamente rápido e simples.
-- TypeScript: Uma linguagem de programação baseada em JavaScript, que adiciona tipagem estática opcional ao código.
-- SASS: Uma extensão do CSS que adiciona recursos como variáveis, mixins e aninhamento.
-- Hooks (useState e useEffect): Recursos do React para adicionar estado e efeitos a componentes funcionais.
-- CSS Modules: Uma técnica que permite o escopo local de estilos CSS em um componente React.
+- **React:** Uma biblioteca JavaScript para a construção de interfaces de usuário.
+- **Vite:** Um construtor de aplicativos web extremamente rápido e simples.
+- **TypeScript:** Uma linguagem de programação baseada em JavaScript, que adiciona tipagem estática opcional ao código.
+- **SASS:** Uma extensão do CSS que adiciona recursos como variáveis, mixins e aninhamento.
+- **CSS Modules:** Uma técnica que permite o escopo local de estilos CSS em um componente React.
+- **React Router Dom:** Uma biblioteca para navegação e roteamento em aplicativos React.
+- **Hooks:**
+  - **useState:** Um hook do React que permite adicionar estado a componentes funcionais.
+  - **useEffect:** Um hook do React que permite adicionar efeitos a componentes funcionais.
+  - **useNavigate:** Um hook do React Router Dom que permite a navegação programática para uma rota específica.
+  - **useLocation:** Um hook do React Router Dom que retorna o objeto de localização contendo informações sobre a URL atual.
+  - **useParams:** Um hook do React Router Dom que retorna os parâmetros de rota correspondentes definidos na configuração do roteador.
 
 ## Página Publicada
 
